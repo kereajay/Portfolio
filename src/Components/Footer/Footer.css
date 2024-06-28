@@ -1,0 +1,17 @@
+.insta{
+    /* background-color: aquamarine; */
+  animation: rotate 5s infinite linear;
+  /* position: ; */
+    
+
+   
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
