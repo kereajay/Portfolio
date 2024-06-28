@@ -20,7 +20,7 @@ import {
   useSpring,
 } from "framer-motion";
 import Projectcard from "./Projectcard";
-import Resumelatest from "../assets/Reaumelatest.pdf";
+import Resumelatest from "../assets/AjayG.pdf";
 
 function AboutMe() {
   const ROTATION_RANGE = 32.5;
