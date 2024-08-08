@@ -3,7 +3,7 @@ import React from "react";
 function Education() {
   return (
     <>
-      <div className="items-center py-10  text-black dark:text-white">
+      <div className="items-center py-10 bg-black  text-white  dark:text-black dark:bg-white">
         <div className="shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] w-[50%] text-center py-5 m-auto">
           <h1 className="text-3xl font-bold">Visvesvaraya Technological university</h1>
           <h3 className="text-xl font-semibold">MCA from</h3>

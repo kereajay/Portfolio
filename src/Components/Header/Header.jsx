@@ -21,7 +21,7 @@ function Header() {
   return (
     <div>
     
-        <div className='lg:flex md:hidden sm:hidden justify-between px-4 bg-blue-300 dark:bg-slate-600 items-center'>
+        <div className='lg:flex md:hidden sm:hidden justify-between px-4 bg-black text-white dark:bg-slate-600 items-center'>
           <div className='flex gap-4 items-center '>
             <img src={ajay} alt="" width={50}  className='rounded-full'/>
             <h1 className='text-3xl  px-4 py-1 '>AJAY</h1>
@@ -34,7 +34,7 @@ function Header() {
             <li onClick={handletheme}><IoSunnySharp /></li>
             </ul>
         </div>
-        <div className='text-3xl lg:hidden md:visible sm:visible bg-blue-400 dark:bg-slate-600'>
+        <div className='text-3xl lg:hidden md:visible sm:visible dark:bg-blue-400 bg-black text-white'>
         <GiHamburgerMenu  onClick={() => setOpen(!open)}/>
 
         </div>
@@ -42,7 +42,7 @@ function Header() {
             open &&
        
         <div>
-        <ul type="none" className=' lg:hidden flex flex-col gap-8 bg-blue-400 py-4 text-lg font-semibold dark:bg-slate-600' >
+        <ul type="none" className=' lg:hidden flex flex-col gap-8 dark:bg-blue-400 py-4 text-lg font-semibold bg-black text-white'  >
           <li className='text-3xl font-semibold flex gap-4 items-center'> <img src={ajay} alt="" width={50} className='rounded-full' /> AJAY</li>
        
                <li><Link to="/AboutMe">AboutMe</Link></li>

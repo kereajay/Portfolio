@@ -56,10 +56,12 @@ function Projectcard({ imgurl, title, gitrepo, hlink }) {
                 transformStyle: "preserve-3d",
                 transform,
             }}
+       
+
             className="relative lg:h-[450px] md:h-[600px] sm:h-[330px] w-full rounded-xl "
         >
 
-            <div className="shadow-[inset_-12px_-8px_40px_#46464620] px-4 py-6 dark:shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)]  absolute inset-4 grid place-content-center rounded-xl" style={{
+            <div className="shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)] px-4 py-6 dark:shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)]  absolute inset-4 grid place-content-center rounded-xl" style={{
                 transform: "translateZ(75px)",
                 transformStyle: "preserve-3d",
             }} >

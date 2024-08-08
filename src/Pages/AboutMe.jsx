@@ -56,16 +56,22 @@ function AboutMe() {
     setTimeout(() => setCopy(false), 500);
   };
 
-const handleResume=()=>{
-  window.open(Resumelatest);
-}
+  const handleResume = () => {
+    window.open(Resumelatest);
+  }
 
-  
+
 
   return (
-    <div className="bg-blue-200 dark:bg-slate-800">
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 bg-blue-200 py-28 bounceInRight shadow-[inset_-12px_-8px_40px_#46464620]       m-auto dark:bg-slate-800 dark:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] ">
-        <div className=" rotatecss  rounded-full py-5 m-auto">
+    <div className="dark:bg-blue-200 bg-black text-white">
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 dark:bg-blue-200 py-28 bounceInRight shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]       m-auto bg-black dark:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] ">
+      <motion.div
+        initial={{ x: '-100vw' }}
+        animate={{ x: 5 }}
+        transition={{ type: 'spring', stiffness: 15 }}
+        // className="text-2xl font-bold text-blue-500"
+      >
+         <div className=" rotatecss  rounded-full py-5 m-auto">
           {/* <br /> */}
           <img
             src={ajay}
@@ -78,7 +84,7 @@ const handleResume=()=>{
           {copy && (
             <h1 className="text-xl text-blue-600 m-auto text-center">Copied</h1>
           )}
-          <div className="text-3xl flex gap-10  text-blue-600 m-auto text-center">
+          <div className="text-3xl flex justify-center gap-10  text-blue-600 m-auto text-center">
             <FaPhoneAlt onClick={handlephonecopy} />
             <IoMdMail onClick={handlecopymail} />
             <Link to="https://www.instagram.com/6247.ajay?igsh=ZWtrbW9uZDJnNjU1&utm_source=qr">
@@ -94,14 +100,37 @@ const handleResume=()=>{
             </Link>
           </div>
         </div>
+       
+      </motion.div>
+
+     
+       
         <div className="px-5 mt-24">
-          <h4 className=" text-2xl font-semibold">Hello it's Me</h4>
-          <h1 className="text-4xl  font-semibold">Ajay kere,</h1>
-          <h1 className="text-2xl  font-semibold" id="shimmerWave">
-            {" "}
-            A passionate front-end developer who thrives in environments that
-            foster continuous learning and professional growth.
-          </h1>
+
+          
+
+
+          <motion.div
+            initial={{ x: '100vw' }}
+            animate={{ x: 5 }}
+            transition={{ type: 'spring', stiffness: 15 }}
+          // className="text-2xl  font-semibold"
+          >
+            <h4 className=" text-2xl font-semibold">Hello it's Me</h4>
+            <h1 className="text-4xl  font-semibold">Ajay kere,</h1>
+
+            <h1 className="text-2xl  font-semibold" id="shimmerWave">
+
+              A passionate front-end developer who thrives in environments that
+              foster continuous learning and professional growth.
+            </h1>
+            <br />
+            <div className="flex  items-center text-xl bg-blue-300 w-28 py-1 rounded-xl" onClick={handleResume}>
+            <button className=" px-2 py-1 mt-1 font-semibold">Resume</button>
+            <FaArrowCircleDown />
+          </div>
+
+          </motion.div>
           <br />
           {/* <div className="text-3xl flex gap-10  text-blue-600">
             <Link to="https://www.instagram.com/6247.ajay?igsh=ZWtrbW9uZDJnNjU1&utm_source=qr">
@@ -121,10 +150,7 @@ const handleResume=()=>{
             </Link>
           </div> */}
           <br />
-          <div className="flex  items-center text-xl bg-blue-300 w-28 py-1 rounded-xl" onClick={handleResume}>
-            <button className=" px-2 py-1 mt-1 font-semibold">Resume</button>
-            <FaArrowCircleDown />
-          </div>
+         
         </div>
       </div>
       <br />
@@ -195,6 +221,13 @@ const handleResume=()=>{
                 src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png"
                 alt=""
                 width={200}
+              />
+            </div>
+            <div>
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1000/1*TGwJKcxY8kGEenRLLedeLw.png"
+                alt=""
+                width={130}
               />
             </div>
           </Carousel>

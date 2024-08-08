@@ -9,6 +9,9 @@ import Education from './Pages/Education.jsx'
 import Contact from './Pages/Contact.jsx'
 import Footer from './Components/Footer/Footer.jsx'
 
+
+
+
 const Maina=()=>{
   return(
     <>
@@ -41,8 +44,9 @@ const routera=createBrowserRouter([
    },{
     path:'/Contact',
     element:<Contact/>
-   }
-
+   },
+ 
+ 
     ]
   }
 ])
