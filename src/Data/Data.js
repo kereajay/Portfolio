@@ -4,6 +4,7 @@ import Fitguru from '../assets/Images/Fitguru.png'
 import Geekfood from '../assets/Images/Geekfood.png'
 import Pokemon from '../assets/Images/Pokemon.png'
 import Resume from '../assets/Images/Resume.png'
+import Hospital from "../assets/Images/Hospital.png"
 export const data = [
     {
         id:1,
@@ -51,6 +52,13 @@ export const data = [
         Title:"Resume",
         link:"https://kereajay.github.io/gekathonjs/ajay/index.html",
         gitrepo:"https://github.com/kereajay/gekathonjs"
+    },
+    {
+       id:7,
+       url:Hospital,
+       Title:"Hospital Management",
+       link:"https://hmern-frontend.vercel.app/",
+       gitrepo:"https://github.com/kereajay/HMERNFrontend",
     }
 
 ]
