@@ -5,6 +5,7 @@ import Geekfood from '../assets/Images/Geekfood.png'
 import Pokemon from '../assets/Images/Pokemon.png'
 import Resume from '../assets/Images/Resume.png'
 import Hospital from "../assets/Images/Hospital.png"
+import Dailyneed from "../assets/Images/Dailyneed.png"
 export const data = [
     {
         id:1,
@@ -59,6 +60,13 @@ export const data = [
        Title:"Hospital Management",
        link:"https://hmern-frontend.vercel.app/",
        gitrepo:"https://github.com/kereajay/HMERNFrontend",
+    },
+    {
+       id:8,
+       url:Dailyneed,
+       Title:"DailyNeed Ecommerce",
+       link:"https://dailyneed-frontend.vercel.app/",
+       gitrepo:"https://github.com/kereajay/DailyneedFrontend",
     }
 
 ]

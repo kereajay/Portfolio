@@ -1,48 +1,30 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import ajay from "../assets/Images/ajay.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { data } from "../Data/Data";
 import { Link } from "react-router-dom";
-// import { FaSquareGithub } from "react-icons/fa6";
-import { GrInstagram } from "react-icons/gr";
+// import { GrInstagram } from "react-icons/gr";
 import { SiVercel } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa";
-import { FaSquareGithub } from "react-icons/fa6";
-import "./About.css";
-import { FaArrowCircleDown } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import Projectcard from "./Projectcard";
 import Resumelatest from "../assets/kereajay55.pdf";
+import { GrInstagram } from "react-icons/gr";
+// import { SiVercel } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
+import { FaArrowCircleDown } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+// import { IoMdMail } from "react-icons/io";
 
 function AboutMe() {
-  const ROTATION_RANGE = 32.5;
-  const HALF_ROTATION_RANGE = 32.5 / 2;
-
   const [copy, setCopy] = useState(false);
+
   const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 5,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 3,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 5 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 3 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
   };
 
   const handlephonecopy = () => {
@@ -50,224 +32,198 @@ function AboutMe() {
     setCopy(true);
     setTimeout(() => setCopy(false), 500);
   };
+
   const handlecopymail = () => {
     navigator.clipboard.writeText("kereajay578@gmail.com");
     setCopy(true);
     setTimeout(() => setCopy(false), 500);
   };
 
-  const handleResume = () => {
-    window.open(Resumelatest);
-  }
-
-
+  const handleResume = () => window.open(Resumelatest);
 
   return (
-    <div className="dark:bg-blue-200 bg-black text-white">
-      <div className="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 dark:bg-blue-200 py-28 bounceInRight shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]       m-auto bg-black dark:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] ">
-      <motion.div
-        initial={{ x: '-100vw' }}
-        animate={{ x: 5 }}
-        transition={{ type: 'spring', stiffness: 15 }}
-        // className="text-2xl font-bold text-blue-500"
-      >
-         <div className=" rotatecss  rounded-full py-5 m-auto">
-          {/* <br /> */}
+    <div className="dark:bg-white bg-black text-white dark:text-black">
+      <div className="grid lg:grid-cols-2 gap-10 px-8 py-24">
+        {/* Profile & Social */}
+        <motion.div
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 15 }}
+          className="flex flex-col items-center"
+        >
           <img
             src={ajay}
-            alt=""
-            className=" rounded-full shadow-[0_50px_50px_rgba(8,_112,_184,_0.7)] m-auto"
-            width={300}
+            alt="Ajay"
+            className="w-60 h-60 rounded-full shadow-lg"
           />
-          <br />
-          <br />
-          {copy && (
-            <h1 className="text-xl text-blue-600 m-auto text-center">Copied</h1>
-          )}
-          <div className="text-3xl flex justify-center gap-10  text-blue-600 m-auto text-center">
-            <FaPhoneAlt onClick={handlephonecopy} />
-            <IoMdMail onClick={handlecopymail} />
-            <Link to="https://www.instagram.com/6247.ajay?igsh=ZWtrbW9uZDJnNjU1&utm_source=qr">
-              {" "}
-              <GrInstagram className="" />
+          {copy && <h1 className="text-blue-600 mt-3">Copied</h1>}
+          <div className="flex gap-6 mt-4 text-2xl text-blue-600">
+            <FaPhoneAlt onClick={handlephonecopy} className="cursor-pointer" />
+            <IoMdMail onClick={handlecopymail} className="cursor-pointer" />
+            <Link to="https://www.instagram.com/6247.ajay">
+              <GrInstagram />
             </Link>
             <Link to="https://www.linkedin.com/in/ajay-kere-443119220/">
-              <FaLinkedin className="" />
+              <FaLinkedin />
             </Link>
             <Link to="https://github.com/kereajay">
-              {" "}
               <FaSquareGithub />
             </Link>
           </div>
-        </div>
-       
-      </motion.div>
+        </motion.div>
 
-     
-       
-        <div className="px-5 mt-24">
-
-          
-
-
-          <motion.div
-            initial={{ x: '100vw' }}
-            animate={{ x: 5 }}
-            transition={{ type: 'spring', stiffness: 15 }}
-          // className="text-2xl  font-semibold"
-          >
-            <h4 className=" text-2xl font-semibold">Hello it's Me</h4>
-            <h1 className="text-4xl  font-semibold">Ajay kere,</h1>
-
-            <h1 className="text-2xl  font-semibold" id="shimmerWave">
-
+        {/* Intro Text */}
+        <motion.div
+          initial={{ x: "100vw" }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 15 }}
+          className="flex flex-col justify-center gap-6"
+        >
+          <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <h4 className="text-2xl font-medium">Hello, it's Me</h4>
+            <h1 className="text-4xl font-bold">Ajay Kere</h1>
+            <p className="text-xl">
               A passionate front-end developer who thrives in environments that
               foster continuous learning and professional growth.
-            </h1>
-            <br />
-            <div className="flex  items-center text-xl bg-blue-300 w-28 py-1 rounded-xl" onClick={handleResume}>
-            <button className=" px-2 py-1 mt-1 font-semibold">Resume</button>
-            <FaArrowCircleDown />
+            </p>
           </div>
-
-          </motion.div>
-          <br />
-          {/* <div className="text-3xl flex gap-10  text-blue-600">
-            <Link to="https://www.instagram.com/6247.ajay?igsh=ZWtrbW9uZDJnNjU1&utm_source=qr">
-              {" "}
-              <GrInstagram className="" />
-            </Link>
-            <Link to="https://vercel.com/ajays-projects-3da46128">
-              {" "}
-              <SiVercel className="" />
-            </Link>
-            <Link to="https://www.linkedin.com/in/ajay-kere-443119220/">
-              <FaLinkedin className="" />
-            </Link>
-            <Link to="https://github.com/kereajay">
-              {" "}
-              <FaSquareGithub />
-            </Link>
-          </div> */}
-          <br />
-         
-        </div>
+          <button
+            onClick={handleResume}
+            className="flex items-center gap-2 text-lg font-medium bg-blue-400 text-white px-4 py-2 rounded-lg w-fit shadow-md"
+          >
+            Resume <FaArrowCircleDown />
+          </button>
+        </motion.div>
       </div>
-      <br />
-      <br />
-      <div>
-        <h1 className="text-3xl font-semibold m-auto text-center">
-          Technical Skills
-        </h1>
-        <br />
-        <br />
 
-        <div className="w-full px-10">
+      {/* Skills Section */}
+      <section className=" py-16">
+        <h1 className="text-3xl font-semibold mb-8 bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent inline-block ml-10">
+          | Technical Skills
+        </h1>
+        <div className="w-[90%] m-auto">
           <Carousel
-            swipeable={false}
-            draggable={false}
+            swipeable={true}
+            draggable={true}
             showDots={false}
             responsive={responsive}
-            ssr={true} // means to render carousel on server-side.
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={1000}
+            autoPlaySpeed={2000}
             keyBoardControl={true}
-            customTransition="all 0.9s ease"
             transitionDuration={1500}
             containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-            //   deviceType={this.props.deviceType}
-            dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
+            removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
           >
-            <div>
+            <div className="flex flex-col items-center justify-center text-center">
               <img
                 src="https://oktayshakirov.com/assets/images/html.png"
-                alt=""
+                alt="HTML Logo"
                 width={130}
+                className="mb-2"
               />
+              <p className="text-lg font-semibold text-gray-700">HTML</p>
             </div>
-            <div>
+
+            <div className="flex flex-col items-center justify-center text-center" >
               <img
                 src="https://oktayshakirov.com/assets/images/css.png"
                 alt=""
                 width={130}
               />
+              <p className="text-lg font-semibold text-gray-700">CSS</p>
+
+              
             </div>
-            <div>
+            <div className="flex flex-col items-center justify-center text-center" >
               <img
                 src="https://oktayshakirov.com/assets/images/java-script.png"
                 alt=""
                 width={130}
               />
+              <p className="text-lg font-semibold text-gray-700">JavaScript</p>
+
+              
             </div>
-            <div>
+            <div className="flex flex-col items-center justify-center text-center" >
               <img
                 src="https://oktayshakirov.com/assets/images/react.png"
                 alt=""
                 width={130}
               />
+              <p className="text-lg font-semibold text-gray-700">Reactjs</p>
+              
             </div>
-            <div>
+            <div className="flex flex-col items-center justify-center text-center" >
               <img
                 src="https://oktayshakirov.com/assets/images/git.png"
                 alt=""
                 width={130}
               />
+              <p className="text-lg font-semibold text-gray-700">Git/GitHub</p>
+              
             </div>
-            <div>
+            <div className="flex flex-col items-center justify-center text-center" >
               <img
                 src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png"
                 alt=""
-                width={200}
+                width={230}
+               
               />
+              <p className="text-lg font-semibold text-gray-700">Java</p>
+              
             </div>
-            <div>
+            <div className="flex flex-col items-center justify-center text-center" >
               <img
                 src="https://miro.medium.com/v2/resize:fit:1000/1*TGwJKcxY8kGEenRLLedeLw.png"
                 alt=""
                 width={130}
               />
+              <p className="text-lg font-semibold text-gray-700">NodeJs</p>
+              
+            </div>
+            <div className="flex flex-col items-center justify-center text-center" >
+              <img
+                src="https://resources.ripplematch.com/hubfs/MongoDB-1.png"
+                alt=""
+                width={130}
+              />
+              <p className="text-lg font-semibold text-gray-700">MongoDB</p>
+              
+            </div>
+            <div className="flex flex-col items-center justify-center text-center" >
+              <img
+                src="https://img.icons8.com/nolan/512/express-js.png"
+                alt=""
+                width={130}
+              />
+              <p className="text-lg font-semibold text-gray-700">Express.js</p>
+              
             </div>
           </Carousel>
         </div>
-      </div>
-      <br />
-      <br />
-      <div className="mt-10">
-        <h1 className="text-3xl font-semibold m-auto text-center">Projects</h1>
-      </div>
-      <br />
-      <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-1 gap-8 px-8 py-8">
-        {data.map((item) => {
-          return (
-            <>
-              {/* <div className='shadow-[inset_-12px_-8px_40px_#46464620] px-4 py-6 dark:shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)] '>
-                                    <div>
-                                        <Link to={item.link}><img src={item.url} alt="" /></Link>
+      </section>
 
-                                    </div>
-                                    <br />
-                                    <div className='text-center'>
-                                        <h1 className='text-2xl font-semibold text-center'>{item.Title}</h1>
-                                        <br />
-                                        <Link to={item.gitrepo}>
-                                            <button className='text-xl flex  items-center m-auto bg-indigo-100 px-4 py-2 rounded-2xl dark:bg-slate-600'>GitRepo<FaSquareGithub /></button>
-                                        </Link>
+      {/* Projects Section */}
 
-                                    </div>
-                                </div> */}
-              <Projectcard
-                imgurl={item.url}
-                title={item.Title}
-                gitrepo={item.gitrepo}
-                hlink={item.link}
-              />
-            </>
-          );
-        })}
-      </div>
+      <section className="py-16">
+        <h1 className="text-3xl font-semibold mb-2 bg-gradient-to-l from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent inline-block ml-10">
+          | Projects
+        </h1>
+
+        <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-8 px-8">
+          {data.map((item, index) => (
+            <Projectcard
+              key={index}
+              imgurl={item.url}
+              title={item.Title}
+              gitrepo={item.gitrepo}
+              hlink={item.link}
+            />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
