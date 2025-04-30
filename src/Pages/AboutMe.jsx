@@ -9,7 +9,7 @@ import { SiVercel } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
 import { motion } from "framer-motion";
 import Projectcard from "./Projectcard";
-import Resumelatest from "../assets/kereajay55.pdf";
+import Resumelatest from "../assets/Ajay.pdf";
 import { GrInstagram } from "react-icons/gr";
 // import { SiVercel } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
