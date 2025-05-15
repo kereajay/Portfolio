@@ -220,6 +220,7 @@ function AboutMe() {
               title={item.Title}
               gitrepo={item.gitrepo}
               hlink={item.link}
+              description={item.description}
             />
           ))}
         </div>

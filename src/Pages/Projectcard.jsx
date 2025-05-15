@@ -10,7 +10,7 @@ import {
 } from "framer-motion";
 import { Link } from "react-router-dom";
 
-function Projectcard({ imgurl, title, gitrepo, hlink }) {
+function Projectcard({ imgurl, title, gitrepo, hlink,description }) {
   const ROTATION_RANGE = 32.5;
   const HALF_ROTATION_RANGE = 32.5 / 2;
 
@@ -56,7 +56,7 @@ function Projectcard({ imgurl, title, gitrepo, hlink }) {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative lg:h-[450px] md:h-[600px] sm:h-[330px] w-full rounded-xl "
+      className="relative lg:h-[500px] md:h-[600px] sm:h-[330px] w-full rounded-xl "
     >
       <div
         className="shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)] px-4 py-6 dark:shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)]  absolute inset-4 grid place-content-center rounded-xl"
@@ -73,6 +73,8 @@ function Projectcard({ imgurl, title, gitrepo, hlink }) {
         <br />
         <div className="">
           <h1 className="text-2xl font-semibold px-2">{title}</h1>
+         <small className="px-2"><i>{description}</i></small>
+          <br />
           <br />
           <Link to={gitrepo}>
             <button class="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50  overflow-hidden h-14 w-56 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold ">
