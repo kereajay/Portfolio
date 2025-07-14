@@ -212,7 +212,7 @@ function AboutMe() {
           | Projects
         </h1>
 
-        <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-8 px-8">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-8 px-8 py-12">
           {data.map((item, index) => (
             <Projectcard
               key={index}

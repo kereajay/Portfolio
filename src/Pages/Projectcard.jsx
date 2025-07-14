@@ -56,7 +56,7 @@ function Projectcard({ imgurl, title, gitrepo, hlink,description }) {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative lg:h-[500px] md:h-[600px] sm:h-[330px] w-full rounded-xl "
+      className="relative lg:h-[500px] md:h-[430px] sm:h-[330px] w-full rounded-xl lg:mb-2 md:mb-2 sm:mb-20 "
     >
       <div
         className="shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)] px-4 py-6 dark:shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)]  absolute inset-4 grid place-content-center rounded-xl"
@@ -67,7 +67,7 @@ function Projectcard({ imgurl, title, gitrepo, hlink,description }) {
       >
         <div>
           <Link to={hlink}>
-            <img src={imgurl} alt="" />
+            <img src={imgurl} alt=""  className=" rounded-xl " />
           </Link>
         </div>
         <br />
