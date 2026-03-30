@@ -9,7 +9,7 @@ import "./Footer.css"
 
 function Footer() {
   return (
-    <div className="bg-gradient-to-r from-[#0f0f0f] via-[#1c1c1c] to-[#2a2a2a] text-white text-center py-12 dark:from-slate-100 dark:via-slate-200 dark:to-white transition-colors duration-500 dark:text-bl dark:text-black">
+    <div className="bg-black text-slate-500 dark:bg-white transition-colors duration-500 dark:text-bl dark:text-black shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)] px-4 py-6 dark:shadow-[inset_-12px_-8px_40px_rgba(8,_112,_184,_0.7)]  text-center">
 
 
       <motion.div

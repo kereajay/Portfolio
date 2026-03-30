@@ -1,4 +1,5 @@
 import React from "react";
+import { GraduationCap } from "lucide-react";
 
 function Education() {
   const educationData = [
@@ -7,6 +8,7 @@ function Education() {
       degree: "MCA",
       college: "Cambridge Institute of Technology",
       year: "2021 - 2023",
+      score: "8.38 CGPA",
     },
     {
       university: "Gulbarga University",
@@ -32,27 +34,50 @@ function Education() {
   ];
 
   return (
-    <div className="min-h-screen py-10 px-4 bg-black dark:bg-white text-white flex flex-col items-center">
-      <h1 className="text-4xl font-extrabold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-pink-500 to-red-400">
+    <div className="min-h-screen py-16 px-6 bg-black dark:bg-white text-white flex flex-col items-center">
+      
+      {/* Heading */}
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-16 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
         Education
       </h1>
 
-      <div className="w-full max-w-5xl flex flex-col gap-10">
+      {/* Timeline */}
+      <div className="relative w-full max-w-4xl border-l-2 border-gray-700 pl-8 space-y-12">
+        
         {educationData.map((edu, index) => (
-          <div
-            key={index}
-            className="p-8 rounded-2xl shadow-lg bg-gradient-to-r  from-indigo-200 via-pink-300 to-rose-200 animate-gradient-x bg-[length:400%_400%] transition-transform transform hover:scale-105 duration-300"
-          >
-            <h2 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r  from-indigo-600 via-pink-500 to-red-400">
-              {edu.university}
-            </h2>
+          <div key={index} className="relative group">
+            
+            {/* Icon */}
+            <div className="absolute -left-[34px] top-2 bg-gradient-to-r from-indigo-500 to-pink-500 p-2 rounded-full shadow-lg">
+              <GraduationCap size={20} />
+            </div>
 
-            <h3 className="text-xl font-semibold mb-1">{edu.degree}</h3>
-            <p className="text-lg mb-1">{edu.college}</p>
-            <p className="mb-1">{edu.year}</p>
-            {edu.score && <p className="">{edu.score}</p>}
+            {/* Card */}
+            <div className="bg-gray-900 p-6 rounded-2xl shadow-lg group-hover:shadow-2xl transition duration-300 hover:-translate-y-1">
+              
+              <h2 className="text-xl md:text-2xl font-bold text-indigo-400 mb-1">
+                {edu.degree}
+              </h2>
+
+              <p className="text-lg text-gray-300">{edu.college}</p>
+
+              <p className="text-sm text-gray-400 mb-2">
+                {edu.university}
+              </p>
+
+              <div className="flex justify-between items-center mt-3 text-sm">
+                <span className="text-gray-400">{edu.year}</span>
+                {edu.score && (
+                  <span className="bg-gradient-to-r from-indigo-500 to-pink-500 px-3 py-1 rounded-full text-xs font-semibold">
+                    {edu.score}
+                  </span>
+                )}
+              </div>
+
+            </div>
           </div>
         ))}
+
       </div>
     </div>
   );

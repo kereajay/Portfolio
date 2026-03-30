@@ -8,6 +8,7 @@ import AboutMe from './Pages/AboutMe.jsx'
 import Education from './Pages/Education.jsx'
 import Contact from './Pages/Contact.jsx'
 import Footer from './Components/Footer/Footer.jsx'
+import Experience from './Pages/Experience.jsx'
 
 
 
@@ -45,6 +46,10 @@ const routera=createBrowserRouter([
     path:'/Contact',
     element:<Contact/>
    },
+   {
+    path:'/Experience',
+    element:<Experience/>
+   }
  
  
     ]

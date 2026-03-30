@@ -44,6 +44,9 @@ function Header() {
           <li className="hover:text-indigo-500 transition">
             <Link to="/Education">Education</Link>
           </li>
+          <li className="hover:text-indigo-500 transition">
+            <Link to="/Experience">Experience</Link>
+          </li>
           <li
             onClick={handletheme}
             className="cursor-pointer text-yellow-400 transition"
@@ -121,6 +124,15 @@ function Header() {
                 className="text-lg font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
               >
                 Education
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Experience"
+                onClick={() => setOpen(false)}
+                className="text-lg font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+              >
+                Experience
               </Link>
             </li>
             <li
