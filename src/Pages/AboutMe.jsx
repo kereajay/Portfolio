@@ -64,7 +64,7 @@ function AboutMe() {
           <img
             src={ajay}
             alt="Ajay"
-            className="w-60 h-60 rounded-full shadow-xl border-4 border-gray-700"
+            className="w-60 h-60 rounded-full shadow-xl border-4 border-gray-700 object-cover"
           />
 
           {copy && <p className="text-indigo-400 mt-3">Copied!</p>}
