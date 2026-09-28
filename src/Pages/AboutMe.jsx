@@ -24,6 +24,7 @@ import Nodejslogo from "../assets/Images/Nodejs.png";
 import MongoDBlogo from "../assets/Images/Mongodb.webp";
 import Redislogo from "../assets/Images/redis.webp"
 import Dockerlogo from "../assets/Images/docker.png"
+import SpringBootlogo from "../assets/Images/spring-boot.png"
 
 function AboutMe() {
   const [copy, setCopy] = useState(false);
@@ -101,14 +102,14 @@ function AboutMe() {
           </div>
 
           <p className="text-lg md:text-xl text-gray-300 dark:text-gray-500 leading-relaxed">
-            Full-Stack Developer with 1.5 years of experience building scalable web applications using React.js, Node.js, and MongoDB. 
+            Full-Stack Developer with 2 plus years of experience building scalable web applications using React.js, Node.js, and MongoDB. 
             Specialized in developing high-performance user interfaces, designing RESTful APIs, and optimizing applications using Redux Toolkit and Redis.
             Experienced in building cross-platform Android applications using React Native (Expo).
           </p>
 
           {/* Tech Tags */}
           <div className="flex flex-wrap gap-3">
-            {["React.js", "Node.js", "Express.js", "MongoDB", "Redis", "Docker","Java","MySQL","ReactNative"].map((tech, i) => (
+            {["React.js","Java","JavaScript","Node.js","SpringtBoot","Express.js", "MongoDB", "Redis", "Docker","MySQL","ReactNative"].map((tech, i) => (
               <span
                 key={i}
                 className="px-3 py-1 text-sm bg-gray-800 rounded-full border border-gray-700 hover:bg-indigo-500 transition"
@@ -157,7 +158,8 @@ function AboutMe() {
               { img: MongoDBlogo, name: "MongoDB" },
               { img: Expresslogo, name: "Express.js" },
               { img: Redislogo, name: "Redis" },
-              { img: Dockerlogo, name: "Docker" }
+              { img: Dockerlogo, name: "Docker" },
+              { img: SpringBootlogo, name: "SpringBoot" },
             ].map((skill, i) => (
               <div key={i} className="flex flex-col items-center bg-slate-800  p-4 mr-2 rounded-full hover:scale-105 transition">
                 <img src={skill.img} alt={skill.name} className="w-28 h-28 object-contain mb-2" />
