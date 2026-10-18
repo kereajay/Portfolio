@@ -102,7 +102,7 @@ function AboutMe() {
           </div>
 
           <p className="text-lg md:text-xl text-gray-300 dark:text-gray-500 leading-relaxed">
-            Full-Stack Developer with 2 plus years of experience building scalable web applications using React.js, Node.js, and MongoDB. 
+            Full-Stack Developer with 3 plus years of experience building scalable web applications using React.js, Node.js, and MongoDB. 
             Specialized in developing high-performance user interfaces, designing RESTful APIs, and optimizing applications using Redux Toolkit and Redis.
             Experienced in building cross-platform Android applications using React Native (Expo).
           </p>

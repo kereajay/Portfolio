@@ -13,6 +13,34 @@ const Experience = () => {
       {/* Timeline */}
       <div className="relative max-w-4xl mx-auto border-l-2 border-gray-700 pl-8 space-y-12">
 
+        <div className="relative group">
+          
+          {/* Icon */}
+          <div className="absolute -left-[34px] top-2 bg-gradient-to-r from-indigo-500 to-pink-500 p-2 rounded-full shadow-lg">
+            <Briefcase size={20} />
+          </div>
+
+          {/* Card */}
+          <div className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-1">
+            <h3 className="text-xl font-semibold text-indigo-400">
+              Software Engineer(Full Stack Developer)
+            </h3>
+
+            <p className="text-sm text-gray-400 mb-3">
+              Halzon Services Pvt. Ltd. | Sep 2023 – Sep 2025
+            </p>
+
+            <ul className="space-y-2 text-gray-300 text-sm leading-relaxed">
+              <li>• Developed and maintained RESTful APIs using Java, Spring Boot, and Spring Data JPA for product catalog, customer management, shopping cart, order processing, and eyewear inventory modules.</li>
+              <li>•	Designed and implemented modular backend architecture with controller, service, and repository layers, improving code maintainability, scalability, and separation of concerns.</li>
+              <li>•	Integrated MySQL for relational data management, implementing entity relationships, database queries, and CRUD operations to support product listings, customer information, and order transactions.</li>
+              <li>• Implemented secure authentication and authorization using Spring Security and JWT, protecting customer accounts and restricting access to authorized application features.</li>
+              <li>•	Developed responsive and interactive frontend interfaces using React.js, JavaScript, HTML, CSS, and Tailwind CSS, integrating backend APIs for product browsing, eyewear selection, cart management, and order placement.</li>
+              <li>•	Collaborated across frontend and backend development to define API contracts, handle validation and error responses, debug integration issues, and deliver a reliable end-to-end e-commerce experience.</li>
+            </ul>
+          </div>
+        </div>
+
         {/* Current Role */}
         <div className="relative group">
           
@@ -24,11 +52,11 @@ const Experience = () => {
           {/* Card */}
           <div className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:-translate-y-1">
             <h3 className="text-xl font-semibold text-indigo-400">
-              Full Stack Developer
+              Software Developer(Full Stack Developer)
             </h3>
 
             <p className="text-sm text-gray-400 mb-3">
-              RevAppayya IT Services Pvt. Ltd. | 2024 – Present
+              RevAppayya IT Services Pvt. Ltd. | Oct 2025 – Present
             </p>
 
             <ul className="space-y-2 text-gray-300 text-sm leading-relaxed">
